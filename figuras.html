@@ -7,7 +7,89 @@
     <title>Figuras Geométricas | Curso Practico de Javascript</title>
 </head>
 <body>
-    <h1>Figuras Geométricas</h1>    
+    <header>
+        <h1>Figuras Geométricas</h1>
+        <p>Esto es parte del curso practico de JavaScript</p> 
+    </header>
+
+    <section>
+        <h2>Calculamos Área y Perimetro del Cuadrado</h2>
+        <form>
+            <label for="InputCuadrado">
+                Ingresa cuanto mide el lado del cuadrado en cms
+            </label>
+            <input id="InputCuadrado" type="number" />            
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+                Calcular Perimetro
+            </button>
+            <button type="button" onclick="calcularAreaCuadrado()">
+                Calcular Área                
+            </button>
+        </form>
+    </section>
+    
+    <section>
+        <h2>Calculamos SOLO el Perimetro del Triangulo</h2>
+        <form>
+            <label for="InputTrianguloLado1">
+                Primer lado del Triángulo en cms
+            </label>
+            <input id="InputTrianguloLado1" type="number" />  
+            
+            <label for="InputTrianguloLado2">
+                Segundo lado del Triángulo en cms
+            </label>
+            <input id="InputTrianguloLado2" type="number" /> 
+
+            <label for="InputTrianguloBase">
+               Base del Triángulo en cms
+            </label>
+            <input id="InputTrianguloBase" type="number" /> 
+                        
+
+            <button type="button" onclick="calcularPerimetroTriangulo()">
+                Calcular Perimetro
+            </button>
+        </form>
+    </section>  
+    
+    <section>
+        <h2>Calculamos SOLO el Área del Triangulo</h2>
+        <form>            
+            <label for="InputTrianguloBaseArea">
+               Base del Triángulo en cms
+            </label>
+            <input id="InputTrianguloBaseArea" type="number" /> 
+
+            <label for="InputTrianguloAltura">
+                Altura del triangulo en cms
+            </label>
+            <input id="InputTrianguloAltura" type="number" />  
+                        
+
+            <button type="button" onclick="calcularAreaTriangulo()">
+                Calcular Área
+            </button>
+        </form>
+    </section>   
+
+
+    <section>
+        <h2>Calculamos Área y Perimetro del Circulo</h2>
+        <form>
+            <label for="InputCirculo">
+                Ingresa cuanto mide el radio del circulo en cms
+            </label>
+            <input id="InputCirculo" type="number" />            
+            <button type="button" onclick="calcularPerimetroCirculo()">
+                Calcular Perimetro
+            </button>
+            <button type="button" onclick="calcularAreaCirculo()">
+                Calcular Área                
+            </button>
+        </form>
+    </section> 
+    
     <script src="./figuras.js"></script>
 </body>
 </html>
