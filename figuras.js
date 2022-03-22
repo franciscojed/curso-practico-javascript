@@ -128,20 +128,23 @@ function calcularAlturaIsosceles()
             const basePartida = lado3 / 2;
             const altura = Math.sqrt(lado1**2 - basePartida**2);
             alert("La altura del equilatero es " + altura + "cms");              
-        } else if (lado1 === lado2) {
-            alert("Este triangulo si es isosceles");
+        } else if (lado1 === lado2) {            
             const basePartida = lado3 / 2;
-            const altura = Math.sqrt(lado1**2 - basePartida**2);
+            let resultadoParcial = lado1**2 - basePartida**2;
+            resultadoParcial = Math.abs(resultadoParcial);
+            const altura = Math.sqrt(resultadoParcial);
             alert("La altura del isosceles es " + altura + "cms");
-        } else if (lado2 === lado3) {
-            alert("Este triangulo si es isosceles");
+        } else if (lado2 === lado3) {           
             const basePartida = lado1 / 2;
-            const altura = Math.sqrt(lado2**2 - basePartida**2);
+            let resultadoParcial = lado2**2 - basePartida**2;
+            resultadoParcial = Math.abs(resultadoParcial);
+            const altura = Math.sqrt(resultadoParcial);
             alert("La altura del isosceles es " + altura + "cms");
-        } else if (lado1 === lado3) {
-            alert("Este triangulo si es isosceles");
+        } else if (lado1 === lado3) {            
             const basePartida = lado2 / 2;
-            const altura = Math.sqrt(lado1**2 - basePartida**2);
+            let resultadoParcial = lado1**2 - basePartida**2;
+            resultadoParcial = Math.abs(resultadoParcial);
+            const altura = Math.sqrt(resultadoParcial);
             alert("La altura del isosceles es " + altura + "cms");
         } else {
             alert("Todos los lados son diferentes, ni es equilatero ni es isosceles");
