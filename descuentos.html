@@ -9,9 +9,36 @@
 <body>
     <header>
         <h1>
-            Porcentajes y Descuentos
+            Porcentajes y Descuentos | Curso Practico de JavaScript Platzi
         </h1>
     </header>
+
+    <section>
+        <h2>Calcula el Precio con Descuento aqui</h2>
+
+        <form>
+            <label for="inputPrice">
+                ¿Cúal es el precio original?
+            </label>
+            <input id="inputPrice" type="number" />
+            
+            <label for="inputDiscount">
+                ¿Cúal es el porcentaje de descuento?
+            </label>
+            <input id="inputDiscount" type="number" oninput="onClickDiscountCalc()" />      
+            <button type ="button">
+                Calcular Descuento ya no es necesario gracias a al evento oninput del elemento 
+                input
+            </button>
+        </form>
+        <p id="resultPa"></p>           
+    </section>
+
+    <section>
+        <div id="idDiv" style="color:red">
+            soy un div estatico y espero ser sobre escrito con document...innerText o innerHTML
+        </div>
+    </section>
     
     <script src="./descuentos.js"></script>
 </body>
