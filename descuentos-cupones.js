@@ -40,16 +40,17 @@ function onClickDiscountCalc()
     {        
         if (couponValue != "")
         {
-            alert ("Cupon NO valido");
+            alert ("Cupón Invalido");
         }        
     } 
     else 
     {        
         const i = couponCodes.indexOf(couponValue);
-        if (availableCoupons[i] === 0)
+        if (availableCoupons[i] <= 0)
         {
             alert ("Cupón agotado!");
-        } else
+        }
+        else
         {
             discountPercentage = couponPercentages[i];
             availableCoupons[i]--; 
