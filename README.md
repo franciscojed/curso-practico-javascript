@@ -22,3 +22,11 @@
 - Segundo Paso: Implementar las formulas en JavaScript
 - Tercer Paso: Crear funciones
 - Cuarto Paso: Integras JS con HTML
+
+## Taller # 3 Promedio (media aritmética), Mediana y Moda
+
+- Primer Paso: Definir las formulas 
+- Segundo Paso: Implementar las formulas en JavaScript
+- Tercer Paso: Crear funciones
+- Cuarto Paso: Integras JS con HTML (Reto del Estudiante)
+
