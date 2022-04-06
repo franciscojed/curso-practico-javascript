@@ -1,4 +1,4 @@
-lista1 =
+const lista1 =
 [
     "peras",
     "manzanas",

@@ -1,4 +1,4 @@
-frutas =
+const frutas =
 [
     "peras",
     "manzanas",
