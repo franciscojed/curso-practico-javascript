@@ -35,6 +35,7 @@ const listaEjemplo =
 
 function calcularModa(lista)
 {
+    console.time();
     // eliminando los elementos repetidos
     let listaValoresUnicos = [...new Set(lista)];
 
@@ -64,7 +65,7 @@ function calcularModa(lista)
 
     //hallando el indice del valor más alto
     const indiceModa = listaConteo.indexOf(valorModa);
-
+    console.timeEnd();
     return `La moda es ${listaValoresUnicos[indiceModa]} y su valor es ${valorModa}`;    
 }
 

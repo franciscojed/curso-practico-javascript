@@ -1,4 +1,4 @@
-const lista1 =
+const listaEjemplo =
 [
     "peras",
     "manzanas",
@@ -31,35 +31,16 @@ const lista1 =
     "bananos",
     "bananos",
 ];
-console.time();
-const lista1Count = {};
 
-lista1.map
-(
-    function(elemento)
-    {
-        if (lista1Count[elemento])
-        {
-            lista1Count[elemento] += 1;
-        }
-        else
-        {   
-            lista1Count[elemento] = 1;
+function mode(arr)
+{
+    console.time();
+    return arr.sort(
+        (a,b) =>
+        arr.filter(v => v===a).length - arr.filter(v => v===b).length
+        ).pop();
+}
 
-        }
-    }
-);
 
-const lista1Array = Object.entries(lista1Count).sort((a,b)=>b[1]-a[1]);
-
-const moda = lista1Array[0];
-console.log(moda);
+console.log(mode(listaEjemplo));
 console.timeEnd();
-
-
-
-
-
-
-
-

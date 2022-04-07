@@ -35,40 +35,40 @@ const frutas =
 
 function deListaAObjeto(lista)
 {
-    const elementosUnicosConCantidades = {};
+    const elementosUnicos = {};
 
     lista.map
     (
         function (elemento)
         {
-            if (elementosUnicosConCantidades[elemento])
+            if (elementosUnicos[elemento])
             {
-                elementosUnicosConCantidades[elemento] += 1;
+                elementosUnicos[elemento] += 1;
             }
             else
             {
-                elementosUnicosConCantidades[elemento] = 1;
+                elementosUnicos[elemento] = 1;
             }
         }
     );
-    return elementosUnicosConCantidades;
+    return elementosUnicos;
 }
 
-function deObjetoClasificadoAArray(elementosUnicosConCantidades)
+function deObjClasificadoAArray(elementosUnicos)
 {
-    const arrayElementosOrdenadosYCantidades =
-        Object.entries(elementosUnicosConCantidades).sort
+    const arrayElementosOrdenados =
+        Object.entries(elementosUnicos).sort
         (
-            (a,b) => b[1]-a[1]
+            (a,b) => b[1]-a[1] //la resta para orden descendente
         ); 
-    return arrayElementosOrdenadosYCantidades;
+    return arrayElementosOrdenados;
 }
 
 
 function moda(lista) //FUNCIÓN A INVOCAR
 { 
-    const elementosUnicosConCantidades = deListaAObjeto(lista);
-    const arrayElementosOrdenadosYCantidades = deObjetoClasificadoAArray(elementosUnicosConCantidades);
-    const moda = arrayElementosOrdenadosYCantidades[0];
+    const elementosUnicos = deListaAObjeto(lista);
+    const arrayElementosOrdenados = deObjClasificadoAArray(elementosUnicos);
+    const moda = arrayElementosOrdenados[0];
     return moda;    
 } 
