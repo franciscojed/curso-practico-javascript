@@ -1,3 +1,28 @@
+const notasDeFran = [
+    {
+        course: "Programación",
+        note: 9.9,
+        credit: 5,
+    },
+    {
+        course: "Matemáticas",
+        note: 8.8,
+        credit: 4,
+    },
+    {
+        course: "Inglés",
+        note: 9.5,
+        credit: 4,
+    },
+    {
+        course: "Oratoria",
+        note: 10,
+        credit: 3,
+    },
+];
+
+
+
 const notes = [
     {
         course: "Educación Física",
