@@ -47,7 +47,7 @@ function ordenarListaSalarios(listaSalarios)
 
 
 
-function medianaSalarios (listaSalarios)
+function calcularMedianaSalarios (listaSalarios)
 { 
     let mediana;    
     const salariosPaisOrdenados = ordenarListaSalarios(listaSalarios);
@@ -76,41 +76,96 @@ function medianaSalarios (listaSalarios)
 
 function mediaAritmeticaSalariosTop10(listaSalarios)
 {
+    
+    const porcentajeExcluido = 0.90;
+    
     const salariosPaisOrdenados = ordenarListaSalarios(listaSalarios);
+
+    const top10Indice = parseInt(salariosPaisOrdenados.length * porcentajeExcluido);
 
     const salariosPaisTop10 = salariosPaisOrdenados.splice(top10Indice);
 
-    const porcentajeExcluido = 0.90;
-    const top10Indice = parseInt(salariosPaisOrdenados.length * porcentajeExcluido);
-
-    
     console.log("El 10% de salarios más altos de Colombiaa continuación");
     console.log(salariosPaisTop10);
 
     const mediaAritmeticaTop10 = calcularMediaAritmetica(salariosPaisTop10);
 
     return `La media aritmética del top ${Math.ceil((1-porcentajeExcluido)*100)}% es ${mediaAritmeticaTop10}`;
-
-    //OJO VER BIEN QUE HACE EL METODO SPLICE SEGUN EXPLICA EL PROFE JUAN 
-    //PORQUE ME FUNCIONA PERO NO LO ENTIENDO MUY BIEN QUE DIGAMOS
+   
 }
 
+// ahora hallaré la mediana del top 10% de salarios de Colombia
 
+function calcularMedianaSalariosTop10(listaSalarios)
+{
+    const listaOrdenada = ordenarListaSalarios(listaSalarios);
+    const spliceStart = parseInt(listaOrdenada.length * 0.90);
+    const splicePositions = listaOrdenada.length - spliceStart;
 
-function pruebaSlice()
+    const SalariosTop10 = listaOrdenada.splice(spliceStart, splicePositions);
+    console.log("El top 10 de salarios en el país son");
+    console.log({SalariosTop10});
+
+    const PosicionMitad = parseInt(SalariosTop10.length / 2);
+
+    if (esPar(SalariosTop10.length))
+    {
+        const indexMitad1 = PosicionMitad - 1;
+        const indexMitad2 = PosicionMitad;     
+        const salariosMitad1 = SalariosTop10[indexMitad1];
+        const salariosMitad2 = SalariosTop10[indexMitad2]; 
+        const mediana = calcularMediaAritmetica([salariosMitad1, salariosMitad2]);
+        return mediana;
+
+    }
+    else
+    {     
+        const mediana = SalariosTop10[PosicionMitad];           
+        return mediana;
+    }
+}
+
+//afecta al array original
+function pruebaEmpamar()
 {    
     const arrayEjemplo = [0,1,2,3,4,"Francisco 5","Sandra 6",7,8,9,10];
-    const spliceEjemplo = arrayEjemplo.splice(5,2);
+    const spliceEjemplo = arrayEjemplo.splice(5,3);
+
+    console.log
+    (
+        {
+            arrayEjemplo,
+            spliceEjemplo
+        }
+    );
+}
+
+//no afecta al array original
+function pruebaRebanada()
+{    
+    const arrayEjemplo = [0,1,2,3,4,"Francisco 5","Sandra 6",7,8,9,10];
+    const sliceEjemplo = arrayEjemplo.slice(5,7);
 
     console.log
     (
         {arrayEjemplo},
-        {spliceEjemplo}
+        {sliceEjemplo}
 
     );
 }
 
+//  slice no afecta al array original
 
+function pruebaRebanada2()
+{
+    const array = [0,1,2,3,4,5,6,7,8,9];
+    const arraySlice = array.slice(3, 7);
+    console.log("Array original " + array);
+    console.log("Array slice " + arraySlice);
+
+}
+
+    
 
 
 

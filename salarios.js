@@ -239,3 +239,11 @@ salariosColombia.push
         salario: 3000
     }
 );
+
+salariosColombia.push
+(
+    {
+        nombre: "Ricky Ricón",
+        salario: 50000
+    }
+);
