@@ -21,10 +21,7 @@ function onClickButtonPriceDiscount() {
     
     const inputCoupon = document.getElementById("InputCoupon");
     const couponValue = inputCoupon.value;
-  
-    let descuento;
-
-
+         
     const isCouponValueValid = function (coupon) {
       return coupon.name === couponValue;
    };

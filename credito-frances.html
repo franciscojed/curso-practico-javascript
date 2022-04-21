@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crédito Frances Cuota Fija</title>
+</head>
+<body>
+    <header>
+        <h1>Amortización Crédito Hipotecario Francés</h1>
+    </header>
+    <section>
+        <form>
+            <label for="importe">Importe del prestamo</label>
+            <input type="number" id="importe">
+
+            <label for="tasa-anual">Tasa de interes anual</label>
+            <input type="number" id="tasa-anual">
+
+            <label for="tasa-mensual">Tasa de interes mensual</label>
+            <input type="number" id="tasa-mensual" readonly>
+            
+            <label for="cantidad-agnos">A cuantos años</label>
+            <input type="number" id="cantidad-agnos">
+            
+            <label for="cantidad-meses">Cantidad de pagos por año (meses)</label>
+            <input type="number" id="cantidad-meses" value="12">
+            
+            <label for="mes">Mes de inicio del crédito</label>
+            <select name="meses" id="mes">
+                <option value="1">Enero</option>
+                <option value="2">Febrero</option>
+                <option value="3">Marzo</option>
+                <option value="4">Abril</option>
+                <option value="5">Mayo</option>
+                <option value="6">Junio</option>
+                <option value="7">Julio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+            </select>
+            
+            <label for="agno">Año de inicio del crédito</label>
+            <input type="number" id="agno">     
+            
+            <button type="button" onclick="pagoProgramado()">Calcular</button>
+            
+        </form>
+
+    </section>
+
+    <section id="resultado">      
+        
+    </section>
+
+    <script src = "./credito-frances.js"></script>
+</body>
+</html>
