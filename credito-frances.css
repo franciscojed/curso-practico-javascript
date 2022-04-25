@@ -1,42 +1,32 @@
-/*@font-face
-{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    src: format();
-}
-
-    font-family: "Roboto";
-    src: url(fonts/Roboto.woff2) format('woff2'),
-    url(fonts/Roboto.woff) format('woff'),
-    url(fonts/Roboto.tff) format('truetype');*/
-
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
-body
-{
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgb(201, 217, 233);
-}
-
-/*
-.formulario
-{
-    display: flex;
-    flex-direction: column;
-    background-color: wheat;
-}
-*/
-
-
-
-.formulario 
-{
+body 
+{    
     display: grid;
-    grid-template-columns: 1;
-    background-color: beige;
-    padding: 5px;
+    place-content: center; 
+    background-color: rgb(201, 217, 233);   
+    font-family: 'Montserrat', sans-serif;    
 }
+
+.contenedor-formulario
+{
+    display: grid;    
+    place-content: center; 
+    grid-template-columns: 1fr; 
+    background-color: rgb(125, 162, 231);
+    padding: 10px;
+}
+
+.formulario
+{  
+    display: grid;
+    padding: 10px;
+    height: 380px;
+    background-color: rgb(199, 228, 245);
+}
+
+
 
 
 
