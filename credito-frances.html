@@ -17,7 +17,7 @@
         <form class="formulario">
             
             <label for="importe">Importe del prestamo</label>
-            <input type="number" id="importe" min="1">
+            <input type="number" id="valorPrestamo" min="1">
 
             <label for="tasa-anual">Tasa de interes anual</label>
             <input type="number" id="tasa-anual" min="1">
@@ -27,7 +27,9 @@
             
             <label for="cantidad-agnos">A cuantos años</label>
             <input type="number" id="cantidad-agnos" min="0">
-         
+        </form>
+
+        <form class="formulario">        
             <label for="cantidad-meses">Cantidad de pagos por año (meses)</label>
             <input type="number" id="cantidad-meses" value="12" min="0">
             
@@ -49,11 +51,15 @@
             
             <label for="agno">Año de inicio del crédito</label>
             <input type="number" id="agno" min="1900">     
-            
-            <button type="button" onclick="pagoProgramado()">Calcular</button>   
-        </form>
+        </form>        
+        
+        <button class="boton" type="button" onclick="amortizacion()">Calcular</button>   
+        
     </section>
+    
     <section id="resultado">    
+    </section> 
+    <section id="resultado2">    
     </section> 
 
     <script src = "./credito-frances.js"></script>

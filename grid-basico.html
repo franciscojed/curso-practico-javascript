@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Básico</title>
+</head>
+<style>
+    body {
+        margin: 40px;
+    }
+
+    .contenedor {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 100px 100px 100px; 
+        background-color: blanchedalmond;
+    }
+    
+    .item {
+        background-color: dodgerblue;
+        color: aliceblue;
+        font-size: 150%;   
+        padding: 20px;
+        border-radius: 4px;
+        
+    }
+</style>
+<body>
+<div class="contenedor">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+    <div class="item">F</div>
+</div>    
+</body>
+</html>

@@ -3,26 +3,21 @@
 
 body 
 {    
-    display: grid;
-    place-content: center; 
     background-color: rgb(201, 217, 233);   
     font-family: 'Montserrat', sans-serif;    
 }
 
 .contenedor-formulario
 {
-    display: grid;    
-    place-content: center; 
-    grid-template-columns: 1fr; 
-    background-color: rgb(125, 162, 231);
-    padding: 10px;
+    display: grid;     
+    grid-template-columns: 1fr 1fr;    
+    grid-gap: 10px;
 }
 
 .formulario
-{  
-    display: grid;
-    padding: 10px;
-    height: 380px;
+{      
+    display: grid;  
+    height: 200px;
     background-color: rgb(199, 228, 245);
 }
 
