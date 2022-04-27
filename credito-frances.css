@@ -22,10 +22,21 @@ body
 }
 
 #tabla
-{
-    background-color: darkcyan;
-    border: 1px solid;   
+{    
+    border: 1px solid; 
+    margin-top: 10px;;  
 }
+
+#tabla th
+{
+    padding: 10px;
+}
+
+#tabla td
+{
+    padding: 10px;
+}
+
 
 
 

@@ -59,28 +59,58 @@ function calcularCuota() {
 
 function amortizacion()
 {
-    const objetoAmortizacion = calcularCuota();    
+    const objetoAmortizacion = calcularCuota();  
+
     const valorPrestamo = objetoAmortizacion.prestamo;
     const interesPeriodo = objetoAmortizacion.interesPeriodo;
     const cantidadPeriodos = objetoAmortizacion.cantPeriodos;
     const cuotaFija = objetoAmortizacion.cuotaFija;
     
+    let montoInteres = valorPrestamo * interesPeriodo;
+    let abonoACapital = cuotaFija - montoInteres;
+    let capitalPagado = abonoACapital;
+    let capitalPendiente = valorPrestamo - capitalPagado;
+    let interesAcumulado = montoInteres;
+
+    let USDollar = Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+    });    
+    
     const tabla = document.getElementById("tabla");
     let fila;
     let celda; 
+    
 
     for (let i = 1; i <= cantidadPeriodos; i++)
     {
         fila = tabla.insertRow(i);
+        
         celda = fila.insertCell(0);
         celda.innerHTML = i;
+
         celda = fila.insertCell(1);
-        celda.innerHTML = cuotaFija;
+        celda.innerHTML = USDollar.format(cuotaFija);
+
+        celda = fila.insertCell(2);
+        celda.innerHTML = USDollar.format(abonoACapital);
+
+        celda = fila.insertCell(3);
+        celda.innerHTML = USDollar.format(montoInteres);
+
+        celda = fila.insertCell(4);
+        celda.innerHTML = USDollar.format(capitalPagado);
+
+        celda = fila.insertCell(5);
+        celda.innerHTML = USDollar.format(capitalPendiente);
+
+        celda = fila.insertCell(6);
+        celda.innerHTML = USDollar.format(interesAcumulado);
+
+        montoInteres = capitalPendiente * interesPeriodo;
+        abonoACapital = cuotaFija - montoInteres;
+        capitalPagado = capitalPagado + abonoACapital;
+        capitalPendiente = valorPrestamo - capitalPagado;
+        interesAcumulado = interesAcumulado + montoInteres;
     }
-
-          
-            
-     
-
-
 }
