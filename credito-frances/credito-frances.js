@@ -1,4 +1,15 @@
+//código helper
+// Dá formato de moneda, sirve para pesos o dolares
+let USDollar = Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+});
+
+
+
+
 let cantidadPeriodos = 0;
+ 
 
 function calcularCuota() {
     
@@ -31,7 +42,7 @@ function calcularCuota() {
     const cuota = valorPrestamo * operacion;    
        
     const resultado = document.getElementById("cuota-fija");
-    resultado.innerHTML = `<p>Cuota fija a pagar ${cuota.toFixed(2)}</p>`; 
+    resultado.innerHTML = `<p>Cuota fija a pagar ${USDollar.format(cuota)}</p>`; 
     
     cantidadPeriodos = agnos * meses;
 
@@ -68,13 +79,7 @@ function onClickAmortizacion()
     let abonoACapital = cuotaFija - montoInteres;
     let capitalPagado = abonoACapital;
     let capitalPendiente = valorPrestamo - capitalPagado;
-    let interesAcumulado = montoInteres;
-
-
-    let USDollar = Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-    });    
+    let interesAcumulado = montoInteres;  
     
     const tabla = document.getElementById("tabla");
     let fila;

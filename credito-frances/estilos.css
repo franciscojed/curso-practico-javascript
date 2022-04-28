@@ -2,8 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
 body 
-{    
-    background-color: rgb(201, 217, 233);   
+{   
     font-family: 'Montserrat', sans-serif;    
 }
 
@@ -18,14 +17,26 @@ body
 {      
     display: grid;  
     height: 200px;
-    background-color: rgb(199, 228, 245);
+    background-color: rgb(173, 217, 241);
+    border-radius: 5px;
+}
+
+.formulario input
+{
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.boton
+{
+    border-radius: 8px;
+    font-size: 18px;
 }
 
 #tasa-mensual, #cantidad-meses
 {
     background-color: gainsboro;
 }
-
 
     #tabla
 {    
