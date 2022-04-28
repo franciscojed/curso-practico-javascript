@@ -47,24 +47,6 @@ function calcularCuota() {
     return objetoAmortizacion;
 }
 
-    /*        
-    CÓDIGO DE COMO CREAR UN NUEVO TAG E INSERTARLO DEBAJO DE OTRO NUEVO
-    for (let i = 1; i <= cantidadPeriodos; i++)
-        const nuevoParrafo = document.createElement("p");
-        nuevoParrafo.innerText = i;  
-        document.body.appendChild(nuevoParrafo);  
-    }
-     
-    OTRO CÓDIGO. EM EL QUE ME BASÉ
-    for(i=1;i<=num_stud;i++)
-    {
-        newDiv = document.createElement('div');
-        divIdName = '50'+i;
-        newdiv.setAttribute('id',divIdName);
-        newdiv.innerHTML ='<div id="box'+i+'">Testing 123</div>';
-        document.body.appendChild(newdiv);
-    }
-    */
 
 function onClickAmortizacion()
 {
