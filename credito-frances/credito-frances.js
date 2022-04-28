@@ -50,10 +50,7 @@ function calcularCuota() {
 
 function onClickAmortizacion()
 {
-    if (cantidadPeriodos > 0)
-    {
-        limpiarFilas();
-    }
+    if (cantidadPeriodos > 0) limpiarFilas();
 
     const objetoAmortizacion = calcularCuota();  
 
