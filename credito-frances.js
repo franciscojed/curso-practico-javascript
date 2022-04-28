@@ -1,3 +1,6 @@
+let cantidadPeriodos = 0;
+
+
 function calcularCuota() {
     
     let entrada = document.getElementById("valorPrestamo");
@@ -25,13 +28,12 @@ function calcularCuota() {
     const resultado = document.getElementById("resultado");
     resultado.innerHTML = `<p>Cuota fija a pagar ${cuota.toFixed(2)}</p>`; 
     
-    const cantidadPeriodos = agnos * meses;
+    cantidadPeriodos = agnos * meses;
 
     const objetoAmortizacion =
     {   
         prestamo: valorPrestamo,
-        interesPeriodo: tasaMensual,
-        cantPeriodos: cantidadPeriodos,
+        interesPeriodo: tasaMensual,        
         cuotaFija: cuota      
     }
     
@@ -59,11 +61,15 @@ function calcularCuota() {
 
 function amortizacion()
 {
+    if (cantidadPeriodos != 0)
+    {
+        limpiarFilas();
+    }
+
     const objetoAmortizacion = calcularCuota();  
 
     const valorPrestamo = objetoAmortizacion.prestamo;
     const interesPeriodo = objetoAmortizacion.interesPeriodo;
-    const cantidadPeriodos = objetoAmortizacion.cantPeriodos;
     const cuotaFija = objetoAmortizacion.cuotaFija;
     
     let montoInteres = valorPrestamo * interesPeriodo;
@@ -112,5 +118,17 @@ function amortizacion()
         capitalPagado = capitalPagado + abonoACapital;
         capitalPendiente = valorPrestamo - capitalPagado;
         interesAcumulado = interesAcumulado + montoInteres;
+    }
+    
+}
+
+
+function limpiarFilas()
+{       
+    let i = cantidadPeriodos;
+    while (i > 0)   
+    {
+        document.getElementsByTagName("tr")[i].remove();                   
+        --i;
     }
 }
