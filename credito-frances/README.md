@@ -11,4 +11,4 @@
 
 - Cuarto Paso: Con base en la cuota fija y el interés del periodo (tasa anual / 12) desarrollar una función que muestre una tabla HTML que se genere de forma dinámica y presente un informe con toda la información de la amortización del crédito.
 
-- Quinto Paso: Mejorar la presentación estética de la tabla de informe y del formato de moneda además de restringir algunos campor de texto del formulario para evitar errores de código.
+- Quinto Paso: Mejorar la presentación estética de la tabla de informe y del formato de moneda además de restringir algunos inputs de texto del formulario para evitar errores de código.
