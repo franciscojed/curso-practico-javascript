@@ -30,3 +30,23 @@
 - Tercer Paso: Crear funciones
 - Cuarto Paso: Integras JS con HTML (Reto del Estudiante)
 
+
+## Taller # 4 Salarios
+
+- Primer Paso: Crear una lista ficticia de salarios de minimo 20 persons 
+- Segundo Paso: Ordenar el array de salarios
+- Tercer Paso: Calcular la mediana de todos los salarios
+- Cuarto Paso: Calcular y mostrar la mediana del top 10% de salarios más altos
+
+
+## Taller Reto final - Amortización Crédito Hipotecario Cuota Fija Francés
+
+- Primer Paso: Averiguar la formula para hallar la cuota fija 
+- Segundo Paso: Captar todos los parametros usando formulario
+- Tercer Paso: Calcular la cuota fija con JavaScript usando los fatos captados
+- Cuarto Paso: Con la ayuda de un bucle for crear una tabla generada a partir de los calculos de amortización como abono a capitál, el interés acumulato entre otros.
+- Quinto Paso: Mejorar la presentación de los datos dando formato de moneda a los resultados de la tabla e implementar una función que limpie la tabla para nuevos calculos.
+
+
+
+

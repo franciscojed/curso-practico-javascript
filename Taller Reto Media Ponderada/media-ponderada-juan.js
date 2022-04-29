@@ -136,8 +136,6 @@ const notas = [
 ];
 
 
-
-
 function mediaPonderada(objeto)
 {
     const notesWithCredit = objeto.map(function (noteObject) {
@@ -160,8 +158,7 @@ function mediaPonderada(objeto)
             return sum + newVal;
         }
     );
-    
-    
+        
     const promedioPonderadoNotasConCreditos = sumOfNotesWithCredit / sumOfCredits;
     return promedioPonderadoNotasConCreditos;
 

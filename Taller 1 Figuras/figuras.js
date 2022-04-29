@@ -31,7 +31,7 @@ const PI = Math.PI;
 
 function diametroCirculo(radio)
 {
-    return radio * radio;
+    return 2 * radio;
 }
 
 function perimetroCirculo(radio) 

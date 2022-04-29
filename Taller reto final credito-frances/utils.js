@@ -1,3 +1,13 @@
+function limpiarFilas()
+{       
+    let i = cantidadPeriodos;
+    while (i > 0)   
+    {
+        document.getElementsByTagName("tr")[i].remove();                   
+        --i;
+    }
+}
+
 function mesTextual(mesDePago)
 {
     let mesDePagoTextual;
@@ -47,12 +57,3 @@ function mesTextual(mesDePago)
     return mesDePagoTextual;
 }
 
-function limpiarFilas()
-{       
-    let i = cantidadPeriodos;
-    while (i > 0)   
-    {
-        document.getElementsByTagName("tr")[i].remove();                   
-        --i;
-    }
-}

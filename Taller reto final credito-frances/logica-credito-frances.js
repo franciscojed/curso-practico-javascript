@@ -6,8 +6,6 @@ let USDollar = Intl.NumberFormat("en-US", {
 });
 
 
-
-
 let cantidadPeriodos = 0;
  
 
