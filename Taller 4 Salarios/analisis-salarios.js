@@ -125,8 +125,15 @@ function calcularMedianaSalariosTop10(listaSalarios)
     }
 }
 
+
+
+
+
+
+//APARTADO EDUCATIVO
+
 //afecta al array original
-function pruebaEmpamar()
+function pruebaEmpalmar()
 {    
     const arrayEjemplo = [0,1,2,3,4,"Francisco 5","Sandra 6",7,8,9,10];
     const spliceEjemplo = arrayEjemplo.splice(5,3);
